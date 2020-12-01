@@ -1,54 +1,115 @@
 <!DOCTYPE html>
 <html>
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <body>
 <style>
 *
 {
 padding: 0;
 margin: 0;
+text-decoration: none;
+list-style: none;
 box-sizing: border-box;
 }
 body
 {
 background-image: url(1.jpg);
-background-size: cover;
-background-position: center;
 font-family: sans-serif;
 }
-.menu-bar
+nav
 {
-background: none;
+background: #0082e6;
+height: 80px;
+width: 100%;
 text-align: left;
 }
-.menu-bar ul
-{
-display: inline-flex;
-list-style: none;
-color: #fff;
+label.logo{
+color: white;
+font-size: 35px;
+line-height: 80px;
+padding: 0 100px;
+font-weight: bold;
 }
-.menu-bar ul li
+nav ul
 {
-width: 120px;
-margin: 15px;
-padding: 15px;
+float: right;
+margin-right: 20px;
 }
-.menu-bar ul li a
+nav ul li
 {
-text-decoration: none;
-color: #fff;
+display: inline-block;
+line-height: 80px;
+margin: 0 5px;
 }
-.active, .menu-bar ul li:hover
+nav ul li a
 {
-background-color: #355D98;
+color: white;
+font-size: 17px;
+padding: 7px 13px;
 border-radius: 3px;
+text-transform: uppercase
 }
-.menu-bar .fa
+a.active,a:hover
 {
-margin-right: 8px;
+background: #1b9bff;
+transition: .5s;
 }
+.checkbtn
+{
+font-size: 30px;
+color: white;
+float: right;
+line-height: 80px;
+margin-right: 40px;
+cursor: pointer;
+display: none;
+}
+#check{
+display: none;
+}
+@media (max-width: 952px){
+label.logo{
+font-size: 30px;
+padding-left: 50px;
+}
+nav ul li a{
+ font-size: 16px;
+ }
+ }
+ @media (max-width: 858px;){
+ .checkbtn{
+ display: block;
+ }
+ ul{
+ position: fixed;
+ width: 100%;
+ height: 100vh;
+ background: #2c3e50;
+ top: 80px;
+ left: -100%;
+ text-align: center;
+ transition: all .5s;
+ }
+ nav ul li{
+ diplay: block;
+ margin: 50px 0;
+ line-height: 30px;
+ }
+ nav ul li a{
+ font-size: 20px;
+ }
+ a:hover,a.active{
+  background: none;
+  color: #0082e6;
+  }
+  #check:checked ~ ul{
+  left: 0;
+  }
+ }
 .color
 {
 color: #fff;
@@ -60,26 +121,34 @@ color: #DFFF00;
 .mm
 {
 color: #EC320D;
-}
+} 
 </style>
-<div class="menu-bar">
+<nav>
+<input type="checkbox" id="check">
+<label for="check" class="checkbtn">
+ <i class="fas fa-bars"></i>
+ </label>
+<label class="logo">Share_Radio</label>
 <ul>
-<li class="active"><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
-<li><a href="Registration.html"><i class="fa fa-registered"></i>Register</a></li>
-<li><a href="About.html"><i class="fa fa-user"></i>About</a></li>
+<li class="active"><a href="index.html" class="fa fa-home"> Home</a></li>
+<li><a href="Registration.html" class="fa fa-registered"> Register</a></li>
+<li><a href="About.html" class="fa fa-user"> About</a></li>
 </ul>
-</div></br>
+</nav>
 <section>
-<center><i><h1 class="color"><b>Share_Radio</b></h1></i></center></br>
+<center><i><h1 class="color"><b>Share_Radio</b></h1></i></center>&nbsp;
 <center><p class="mark"><i><b>A vision to future</b></i></p></center>
 </section>
-<h1><marquee behavior="scroll" direction="left"><mark class="mm">website is under maintenance</mark></marquee></h1></br></br></br></br>
+<h1><marquee behavior="scroll" direction="left"><mark class="mm">website is under maintenance</mark></marquee></h1>
+&nbsp;
+&nbsp;
+&nbsp;
 <footer>
 <div class="footer">
 <style>
 .footer
 {
-padding: 6px;
+padding: 10px;
 background: rgb(0,0,0);
 text-align: center;
 }
@@ -127,9 +196,10 @@ color: #fff;
 <a href="https://t.me/Share_Radio" target="_blank" class="fa fa-telegram"></a>
 
 <a href="mailto:shareradio@shareradio.in" target="_blank" class="fa fa-envelope-o"></a>
-</br></br>
+
+
 <div class="panel-footer">
-<h4>&copy; Shareradio, All Rights Reserved. 2020</h4>
+<h4> &nbsp;&copy; Shareradio, All Rights Reserved. 2020</h4>
 </div>
 </div>
 </footer>
