@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/yourcode.js"></script>
 </head>
 <body>
 <style>
@@ -17,7 +18,6 @@ box-sizing: border-box;
 }
 body
 {
-background-image: url(1.jpg);
 font-family: sans-serif;
 }
 nav
@@ -58,8 +58,7 @@ a.active,a:hover
 background: #1b9bff;
 transition: .5s;
 }
-.checkbtn
-{
+.checkbtn{
 font-size: 30px;
 color: white;
 float: right;
@@ -110,98 +109,25 @@ nav ul li a{
   left: 0;
   }
  }
-.color
-{
-color: #fff;
-}
-.mark
-{
-color: #DFFF00;
-}
-.mm
-{
-color: #EC320D;
-} 
+ section{
+ background: url(1.jpg) no-repeat;
+ background-size: cover;
+ height: calc(100vh - 80px);
+ }
 </style>
 <nav>
 <input type="checkbox" id="check">
 <label for="check" class="checkbtn">
- <i class="fas fa-bars"></i>
+<i class="fa fa-bars"></i>
  </label>
 <label class="logo">Share_Radio</label>
 <ul>
-<li class="active"><a href="index.html" class="fa fa-home"> Home</a></li>
-<li><a href="Registration.html" class="fa fa-registered"> Register</a></li>
-<li><a href="About.html" class="fa fa-user"> About</a></li>
+<li><a class="active" href="#"> Home</a></li>
+<li><a href="#"> Register</a></li>
+<li><a href="#"> About</a></li>
 </ul>
 </nav>
 <section>
-<center><i><h1 class="color"><b>Share_Radio</b></h1></i></center>&nbsp;
-<center><p class="mark"><i><b>A vision to future</b></i></p></center>
 </section>
-<h1><marquee behavior="scroll" direction="left"><mark class="mm">website is under maintenance</mark></marquee></h1>
-&nbsp;
-&nbsp;
-&nbsp;
-<footer>
-<div class="footer">
-<style>
-.footer
-{
-padding: 10px;
-background: rgb(0,0,0);
-text-align: center;
-}
-.footer .fa {
-  padding: 10px;
-  font-size: 30px;
-  width: 60px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-}
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-.fa-instagram {
-  background: #cb2027;
-  color: white;
-}
-.fa-telegram {
-  background: #55ACEE;
-  color: white;
-}
-.fa-envelope-o {
- background: #ffffff;
- color: red
-}
-.panel-footer
-{
-text-align: center;
-color: #fff;
-}
-</style>
-<a href="https://www.instagram.com/shareradio.in/" target="_blank" class="fa fa-instagram"></a>
-
-<a href="https://www.facebook.com/shareradio.in/" target="_blank" class="fa fa-facebook"></a>
-
-<a href="https://twitter.com/shareradioindia" target="_blank" class="fa fa-twitter"></a>
-
-<a href="https://t.me/Share_Radio" target="_blank" class="fa fa-telegram"></a>
-
-<a href="mailto:shareradio@shareradio.in" target="_blank" class="fa fa-envelope-o"></a>
-
-
-<div class="panel-footer">
-<h4> &nbsp;&copy; Shareradio, All Rights Reserved. 2020</h4>
-</div>
-</div>
-</footer>
 </body>
 </html>
