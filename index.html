@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="script.js" defer></script>
+</head>
+<body>
+<style>
+*{
+box-sizing: border-box;
+}
+body{
+margin: 0;
+padding: 0;
+}
+.navbar{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #333;
+color: white;
+}
+.title{
+font-size: 1.5rem;
+margin: .5rem;
+}
+.navbarlinks ul{
+margin: 0;
+padding: 0;
+display: flex;
+}
+.navbarlinks li{
+list-style: none;
+}
+.navbarlinks li a{ 
+text-decoration: none;
+color: white;
+padding: 1rem;
+display: block;
+}
+.navbarlinks li:hover{
+background-color: #555;
+}
+.toggle{
+position: absolute;
+top: .75rem;
+right: 1rem;
+display: none;
+flex-direction: column;
+justify-content: space-between;
+width: 30px;
+height:21px;
+}
+.toggle .bar{
+height: 3px;
+width: 100%;
+background-color: white;
+border-radius: 10px;
+}
+@media (max-width 480px){
+.toggle{
+display: flex;
+}
+.navbarlinks{
+display: none;
+}
+.navbar{
+flex-direction: column;
+align-items: flex-start;
+}
+.navbarlinks ul{
+width: 100%;
+flex-direction: column;
+}
+.navbarlinks li{
+text-align: center;
+}
+.navbarlinks li a{
+padding: .5rem 1rem;
+}
+.navbarlinks.active{
+display: flex;
+}
+}
+</style>
+<nav class="navbar">
+<div class="title">ShareRadio</div>
+<a href="#" class="toggle">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+</a>
+<div class="navbarlinks">
+<ul>
+<li><a class="active" href="#"> Home</a></li>
+<li><a href="#"> Register</a></li>
+<li><a href="#"> About</a></li>
+</ul>
+</div>
+</nav>
+<section>
+</section>
+</body>
+</html>
