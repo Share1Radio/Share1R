@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+	function validate()
+	{
+	 window.alert("Share_Radio registration successful, thank you");
+	}
+	</script>
+</head>
+<body>
+<style>
+body {
+	padding: 0;
+	margin: 0;
+	background-image: url(1.jpg);
+}
+.container {
+	position: relative;
+	margin-top: 100px;
+}
+.container img {
+	display: block;
+	width: 100%;
+}
+nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 5%;
+	height: 100px;
+	background-color: #3e65da;
+}
+nav .logo {
+	float: left;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	color: #fff;
+}
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+nav .links li {
+	list-style: none;
+}
+nav .links a {
+	display: block;
+	padding: 1em;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	left: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+	nav .logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .links a {
+		font-size: 20px;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+	.active nav .logo .links li:hover;
+	{
+	background-color: #fff;
+     border-radius: 5px;
+	}
+}
+.panelfooter
+{
+padding: 6px;
+background: rgb(0,0,0);
+text-align: center;
+color: white;
+}
+.bold {
+font-size: 20px;
+}
+</style>
+<nav>
+	<input id="nav-toggle" type="checkbox">
+	<div class="logo">ShareRadio</div>
+	<ul class="links">
+		<li class="active"><a href="index.html" class="fa fa-home">&nbsp;Home</a></li>
+		<li><a href="registration.html" class="fa fa-registered">&nbsp;Register</a></li>
+		<li><a href="about.html" class="fa fa-user">&nbsp;About</a></li>
+	</ul>
+	<label for="nav-toggle" class="icon-burger">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</label>
+</nav>
+    <div class="container">
+      <div class="row col-md-6 col-md-offset-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            <h1>Share_Radio Registration Form</h1>
+          </div>
+          <div class="panel-body">
+            <form action="db.php" target="_self" method="post">
+              <div class="form-group">
+                <label for="First Name">First Name</label>
+                <input
+                  type="text"
+				  pattern="^[A-Za-z\s]{1,50}"
+				  title="This field must contain alphabets and space not more than 50 characters"
+                  class="form-control"
+                  id="FirstName"
+                  name="FirstName"
+                  required 
+				  />
+              </div>
+              <div class="form-group">
+                <label for="Last Name">Last Name</label>
+                <input
+                  type="text"
+				  pattern="^[A-Za-z\s]{1,50}"
+				  title="This field must contain alphabets and space not more than 50 characters"
+                  class="form-control"
+                  id="LastName"
+                  name="LastName"
+				  required
+                />
+			  <div class="form-group">
+			   <label for="Date of Birth">Date of Birth</label>
+			   <input
+			     type="date"
+				 min="1950-01-01"
+				 max="2004-12-31"
+				 class="form-control"
+				 id="DateofBirth"
+				 name="DateofBirth"
+				 required
+			    />
+              </div>
+              <div class="form-group">
+                <label for="Gender">Gender</label>
+                <div>
+                  <label for="male" class="radio-inline"
+                    ><input
+                      type="radio"
+                      name="Gender"
+                      value="Male"
+                      id="Male"
+					  required
+                    />Male</label
+                  >
+                  <label for="Female" class="radio-inline"
+                    ><input
+                      type="radio"
+                      name="Gender"
+                      value="Female"
+                      id="Female"
+					  required
+                    />Female</label
+                  >
+                  <label for="other" class="radio-inline"
+                    ><input
+                      type="radio"
+                      name="Gender"
+                      value="Other"
+                      id="Other"
+					  required
+                    />Other</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="Email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="Email"
+                  name="Email"
+				  required
+                />
+              </div>
+			  <div class="form-group">
+               <label for="Country">Country</label>			  
+			   <select name="Country" class="form-control">			    
+				<option value="India" id="India">India</option>
+               </select>
+			  </div>
+			  <div class="form-group">
+               <label for="State">State</label>			  
+			   <select name="State" class="form-control">			    
+				<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chattisgarh">Chattisgarh</option>
+                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                <option value="Daman and Diu">Daman and Diu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Ladakh">Ladakh</option>
+                <option value="Lakshdweep">Lakshdweep</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Puducherry">Puducherry</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+               </select>
+			  </div>
+              <div class="form-group">
+                <label for="Mobile Number">Mobile Number</label>
+                <input
+                  type="tel"
+				  pattern="^\d{3}\d{3}\d{4}$"
+				  title="This field can only contain numeric value of 10 digits"
+                  class="form-control"
+                  id="MobileNumber"
+                  name="MobileNumber"
+				  required
+                />
+              </div>
+              <input type="submit" submit class="btn btn-primary" />
+            </form>
+          </div>
+          <div class="panel-footer text-right">
+            <small>&copy;shareradio</small>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="panelfooter">
+<h4>&copy; Shareradio, All Rights Reserved. 2020</h4>
+</div>
+</body>
+</html>
